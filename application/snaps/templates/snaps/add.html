@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <form action="{{ url_for('snaps.add') }}" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.id }}
+        <div class="row">
+            <div> {{ form.name.lable() }}: {{ form.name }} </div>
+            {% if form.name.errors %}
+                <ul class="errors">
+                    {% for error in form.name.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <div> {{ form.extension.lable() }}: {{ form.extension }} </div>
+            {% if form.extension.errors %}
+                <ul class="errors">
+                    {% for error in form.extension.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div> {{ form.content.lable() }}: {{ form.content }}</div>
+            {% if form.content.errors %}
+                <ul class="errors">
+                    {% for error in form.content.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div><input type="submit" value="Snap"></div>
+    </form>
+{% endblock %}

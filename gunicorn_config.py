@@ -29,7 +29,7 @@ import multiprocessing
 #       range.
 #
 
-bind = '127.0.0.1:8100'
+bind = '127.0.0.1:13001'
 backlog = 2048
 
 #
@@ -75,7 +75,8 @@ backlog = 2048
 #
 #       A positive integer. Generally set in the 1-5 seconds range.
 #
-workers = multiprocessing.cpu_count() * 2 + 1
+# workers = multiprocessing.cpu_count() * 2 + 1
+workers = 1
 worker_class = 'gevent'
 worker_connections = 1000
 timeout = 50
@@ -83,7 +84,7 @@ keepalive = 4
 threads = 4
 max_requests = 0
 graceful_timeout = 30
-worker_tmp_dir = '/Users/achilles_xushy/Desktop/python2/7po_server/gunicorn/'
+worker_tmp_dir = '/Users/achilles_xushy/PycharmProjects/config_and_log/supervisor'
 #
 #   spew - Install a trace function that spews every line of Python
 #       that is executed when running the server. This is the
@@ -131,11 +132,11 @@ spew = False
 #       None to signal that Python should choose one on its own.
 #
 daemon = False
-pidfile = '/Users/achilles_xushy/Desktop/python2/7po_server/gunicorn/flask.pid'
+pidfile = '/Users/achilles_xushy/PycharmProjects/config_and_log/supervisor/flask.pid'
 umask = 0
 # user = 'achilles_xushy'
 # group = 'admin'
-tmp_upload_dir = '/Users/achilles_xushy/Desktop/python2/7po_server/gunicorn'
+tmp_upload_dir = '/Users/achilles_xushy/PycharmProjects/config_and_log/supervisor'
 #
 #   Logging
 #
@@ -147,9 +148,9 @@ tmp_upload_dir = '/Users/achilles_xushy/Desktop/python2/7po_server/gunicorn'
 #
 #       A string of "debug", "info", "warning", "error", "critical"
 #
-errorlog = '/Users/achilles_xushy/Desktop/python2/7po_server/gunicorn/flask_error.log'
+errorlog = '/Users/achilles_xushy/PycharmProjects/config_and_log/supervisor/gunicorn_flask_error.log'
 loglevel = 'info'
-accesslog = '/Users/achilles_xushy/Desktop/python2/7po_server/gunicorn/flask_access.log'
+accesslog = '/Users/achilles_xushy/PycharmProjects/config_and_log/supervisor/gunicorn_flask_access.log'
 access_log_format = '%(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
 #
 # Process naming

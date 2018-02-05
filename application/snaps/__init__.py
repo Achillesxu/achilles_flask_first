@@ -3,17 +3,14 @@
 """
 @license : (C) Copyright 2013-2017, Easy doesnt enter into grown-up life.
 @Software: PyCharm
-@Project : achilles_flask_first
-@Time : 2018/2/1 上午10:07
+@Project : application
+@Time : 2018/2/3 下午9:24
 @Author : achilles_xushy
 @contact : yuqingxushiyin@gmail.com
-@Site :
+@Site : 
 @File : __init__.py
 @desc :
 """
-from flask import Flask
 
-app = Flask(__name__)
-
-from achilles_flask_first import models
-from achilles_flask_first import views
+if __name__ == '__main__':
+    pass

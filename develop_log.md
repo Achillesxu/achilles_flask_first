@@ -5,4 +5,6 @@
     
 ## 20180202 adjust project structure from module to package
 
+## 20180205 add snaps and users blueprint
+
       
